@@ -1,6 +1,11 @@
 # Integrantes
+1. Ricardo Flores ve
+2. Andrés Guzmán
+3. 
 # Tema
+
 # Problema
+La tienda necesita un anlisis sobre los clientes y las ventas de los productos, la tienda quiere diseñar una estartegia para incrementar sus ventas y fidelizar sus clientes. 
 # Solución
 1. Normalizar la bases de datos.
 2. Definir criterios de segmentación de clientes. (High client, low client, smart client)
