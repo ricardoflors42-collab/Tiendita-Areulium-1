@@ -12,18 +12,37 @@ La tienda necesita un anlisis sobre los clientes y las ventas de los productos, 
 3. Variables a emplear (frecuencia de compra, importe, productos comprados, edad)
 # Dataset
 *Productos*
-- Atributo Tipo de dato Escala de medición
-- id_producto Discreto
-- nombre_producto Nominal
-- categoria Nominal
-- precio_unitario Continuo
+- Atributo | Tipo de dato | Escala de medición
+- id_producto | Int | 
+- nombre_producto | strings | 
+- categoria | strings |
+- precio_unitario | float |
 
 *Clientes*
-- Atributo Tipo de dato Escala de medición
-- id_cliente Discreto
-- nombre_cliente Nominal
-- email Nominal
-- ciudad Nominal
-- fecha_alta
+- Atributo | Tipo de dato | Escala de medición
+- id_cliente | int |
+- nombre_cliente | strings
+- email | strings |
+- ciudad | strings |
+- fecha_alta | date |
+
+ *Ventas*
+ - Atributo | Tipo de dato | Escala de medición
+ - id_venta | int |
+ - fecha	| date | 
+ - id_cliente	| int |
+ - nombre_cliente	| strings |
+ - apellido_cliente	| strings |
+ - email | strings | 
+ - medio_pago | strings
+
+ *Detalle_ventas*
+ - id_venta | int
+ - id_producto | int
+ - nombre_producto | string
+ - cantidad | int |
+ - precio_unitario |	float
+ - importe | float |
+ 
 # Pseudocodigo
 # Diagrama del programa
