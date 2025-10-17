@@ -1,6 +1,6 @@
 # Integrantes
-1. Ricardo Flores ve
-2. Andrés Guzmán
+1. Ricardo Flores ven
+2. Andrés Guzmán col
 3. 
 # Tema
 
@@ -12,37 +12,42 @@ La tienda necesita un anlisis sobre los clientes y las ventas de los productos, 
 3. Variables a emplear (frecuencia de compra, importe, productos comprados, edad)
 # Dataset
 *Productos*
-- Atributo | Tipo de dato | Escala de medición
-- id_producto | Int | 
-- nombre_producto | strings | 
-- categoria | strings |
-- precio_unitario | float |
+Atributo | Tipo de dato | Escala de medición | Identificadores
+-|-|-|-
+id_producto | Int | intervalo | PK
+nombre_producto | strings | nominal | 
+categoria | strings | nominal |
+precio_unitario | float | razón |
 
 *Clientes*
-- Atributo | Tipo de dato | Escala de medición
-- id_cliente | int |
-- nombre_cliente | strings
-- email | strings |
-- ciudad | strings |
-- fecha_alta | date |
+Atributo | Tipo de dato | Escala de medición | Identificadores
+-|-|-|-
+id_cliente | int | intervalo | PK
+nombre_cliente | strings | nominal | 
+email | strings | nominal | 
+ciudad | strings | nominal |
+fecha_alta | date | intervalo |
 
  *Ventas*
- - Atributo | Tipo de dato | Escala de medición
- - id_venta | int |
- - fecha	| date | 
- - id_cliente	| int |
- - nombre_cliente	| strings |
- - apellido_cliente	| strings |
- - email | strings | 
- - medio_pago | strings
+Atributo | Tipo de dato | Escala de medición | Identificadores
+-|-|-|-
+ id_venta | int | intervalo | FK
+ fecha	| date | intervalo |
+ id_cliente	| int | intervalo | FK 
+ nombre_cliente	| strings | nominal | 
+ apellido_cliente	| strings | nominal | 
+ email | strings | nominal |
+ medio_pago | strings | nominal |
 
  *Detalle_ventas*
- - id_venta | int
- - id_producto | int
- - nombre_producto | string
- - cantidad | int |
- - precio_unitario |	float
- - importe | float |
+Atributo | Tipo de dato | Escala de medición | Identificadores
+-|-|-|-
+id_venta | int | intervalo | PK
+id_producto | int | intervalo | FK
+nombre_producto | string | nominal |
+cantidad | int | razón |
+precio_unitario |	float | razón |
+importe | float | razón | 
  
 # Pseudocodigo
 # Diagrama del programa
