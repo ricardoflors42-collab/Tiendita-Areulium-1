@@ -5,13 +5,16 @@
 # Tema
 
 # Problema
-La tienda necesita un anlisis sobre los clientes y las ventas de los productos, la tienda quiere diseñar una estartegia para incrementar sus ventas y fidelizar sus clientes. 
+**Planificación deficiente y nula segmentación de clientes en Tienda Aurelion.**
+
+La tienda opera sin una planificación de ventas estructurada, lo que desencadena una gestión de inventario imprecisa. De forma paralela, su enfoque comercial es indiferenciado, tratando a todos los clientes por igual. Esta falta de segmentación impide diseñar estrategias de marketing eficientes y personalizadas que realmente conecten con los consumidores e impulsen la demanda.
 # Solución
 1. Normalizar la bases de datos.
-2. Definir criterios de segmentación de clientes. (High client, low client, smart client)
-3. Variables a emplear (frecuencia de compra, importe, productos comprados, edad)
+2. Identificar y definir las variables clave necesarias para alimentar los modelo
+3. Desarrollar modelos de Machine Learning para la segmentacion automatica de clientes y la prediccion de la demanda
+4. Implementar un Dashboard para visualizar y monitorear los KPI de la tienda
 # Dataset
-*Productos*
+**Productos**
 Atributo | Tipo de dato | Escala de medición | Identificadores
 -|-|-|-
 id_producto | Int | intervalo | PK
@@ -19,7 +22,7 @@ nombre_producto | strings | nominal |
 categoria | strings | nominal |
 precio_unitario | float | razón |
 
-*Clientes*
+**Clientes**
 Atributo | Tipo de dato | Escala de medición | Identificadores
 -|-|-|-
 id_cliente | int | intervalo | PK
@@ -28,7 +31,7 @@ email | strings | nominal |
 ciudad | strings | nominal |
 fecha_alta | date | intervalo |
 
- *Ventas*
+ **Ventas**
 Atributo | Tipo de dato | Escala de medición | Identificadores
 -|-|-|-
  id_venta | int | intervalo | FK
@@ -39,10 +42,10 @@ Atributo | Tipo de dato | Escala de medición | Identificadores
  email | strings | nominal |
  medio_pago | strings | nominal |
 
- *Detalle_ventas*
+ **Detalle_ventas**
 Atributo | Tipo de dato | Escala de medición | Identificadores
 -|-|-|-
-id_venta | int | intervalo | PK
+id_venta | int | intervalo | fK
 id_producto | int | intervalo | FK
 nombre_producto | string | nominal |
 cantidad | int | razón |
