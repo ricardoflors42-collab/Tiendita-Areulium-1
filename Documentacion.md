@@ -34,7 +34,7 @@ fecha_alta | date | intervalo |
  **Ventas**
 Atributo | Tipo de dato | Escala de medición | Identificadores
 -|-|-|-
- id_venta | int | intervalo | FK
+ id_venta | int | intervalo | PK
  fecha	| date | intervalo |
  id_cliente	| int | intervalo | FK 
  nombre_cliente	| strings | nominal | 
@@ -45,7 +45,7 @@ Atributo | Tipo de dato | Escala de medición | Identificadores
  **Detalle_ventas**
 Atributo | Tipo de dato | Escala de medición | Identificadores
 -|-|-|-
-id_venta | int | intervalo | fK
+id_venta | int | intervalo | FK
 id_producto | int | intervalo | FK
 nombre_producto | string | nominal |
 cantidad | int | razón |
