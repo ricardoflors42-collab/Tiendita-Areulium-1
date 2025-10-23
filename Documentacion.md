@@ -1,7 +1,7 @@
 # Integrantes
 1. Ricardo Flores ven
 2. Andrés Guzmán col
-3. 
+3. Rocio Belen Ruiz Diaz
 # Tema
 
 # Problema
@@ -53,4 +53,48 @@ precio_unitario |	float | razón |
 importe | float | razón | 
  
 # Pseudocodigo
+Inicio
+
+1. Importar librerías necesarias:
+   - pandas para manipulación de datos
+
+2. Cargar archivos Excel:
+   - productos.xlsx
+   - ventas.xlsx
+   - clientes.xlsx
+   - detalles_venta.xlsx
+
+3. Mostrar menú interactivo con opciones:
+   a. Consultar productos
+   b. Consultar ventas por fecha
+   c. Consultar clientes
+   d. Consultar detalles de una venta
+   e. Generar resumen estadístico
+   f. Salir
+
+4. Mientras el usuario no elija "Salir":
+   a. Leer opción ingresada
+   b. Si opción es válida:
+      - Ejecutar acción correspondiente
+      - Mostrar resultados en consola
+   c. Si opción no es válida:
+      - Mostrar mensaje de error
+
+5. Finalizar programa
+
+Fin
+
+
 # Diagrama del programa
+
+flowchart TD
+    A[Inicio] --> B[Importar librerías]
+    B --> C[Cargar archivos Excel normalizados]
+    C --> D[Mostrar menú interactivo]
+    D --> E{¿Opción válida?}
+    E -- Sí --> F[Ejecutar acción según opción]
+    F --> G{¿Salir?}
+    G -- Sí --> H[Fin]
+    G -- No --> D
+    E -- No --> I[Mostrar mensaje de error]
+    I --> D
