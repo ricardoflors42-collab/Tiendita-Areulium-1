@@ -55,35 +55,43 @@ importe | float | razón |
 # Pseudocodigo
 Inicio
 
-1. Importar librerías necesarias:
-   - pandas para manipulación de datos
+- 1. Importar las librerías necesarias:
 
-2. Cargar archivos Excel:
-   - productos.xlsx
-   - ventas.xlsx
-   - clientes.xlsx
-   - detalles_venta.xlsx
+pandas para la manipulación y análisis de datos.
 
-3. Mostrar menú interactivo con opciones:
-   a. Consultar productos
-   b. Consultar ventas por fecha
-   c. Consultar clientes
-   d. Consultar detalles de una venta
-   e. Generar resumen estadístico
-   f. Salir
+- 2. Cargar los archivos de datos:
 
-4. Mientras el usuario no elija "Salir":
-   a. Leer opción ingresada
-   b. Si opción es válida:
-      - Ejecutar acción correspondiente
-      - Mostrar resultados en consola
-   c. Si opción no es válida:
-      - Mostrar mensaje de error
+productos.xlsx
 
-5. Finalizar programa
+ventas.xlsx
+
+clientes.xlsx
+
+detalles_venta.xlsx
+
+- 3. Mostrar un menú interactivo con las siguientes opciones:
+a. Consultar productos disponibles
+b. Consultar ventas por fecha
+c. Consultar información de clientes
+d. Ver detalles de una venta específica
+e. Generar un resumen estadístico
+f. Salir del programa
+
+- 4. Mientras el usuario no elija la opción "Salir":
+a. Leer la opción ingresada.
+b. Si la opción es válida:
+
+- 5. Ejecutar la acción correspondiente.
+
+- 6. Mostrar los resultados en la consola.
+c. Si la opción no es válida:
+
+- 7. Mostrar un mensaje de error indicando que la opción no existe.
+
+- 8.
+  9.  Finalizar la ejecución del programa.
 
 Fin
-
 
 # Diagrama del programa
 
