@@ -3,7 +3,7 @@
 2. Andrés Guzmán col
 3. Rocio Belen Ruiz Diaz
 # Tema
-
+Tienda retail Aurelion
 # Problema
 **Planificación deficiente y nula segmentación de clientes en Tienda Aurelion.**
 
@@ -54,55 +54,57 @@ importe | float | razón |
  
 # Pseudocodigo
 Inicio
+- 1. Mostrar un menú interactivo con las siguientes opciones:
+a. Consultar integrantes
+b. Consultar Tema, problema y solución
+c. Consultar Datasets
+d. consultar psudocodigos
+e. salir
 
-- 1. Importar las librerías necesarias:
-
-pandas para la manipulación y análisis de datos.
-
-- 2. Cargar los archivos de datos:
-
-productos.xlsx
-
-ventas.xlsx
-
-clientes.xlsx
-
-detalles_venta.xlsx
-
-- 3. Mostrar un menú interactivo con las siguientes opciones:
-a. Consultar productos disponibles
-b. Consultar ventas por fecha
-c. Consultar información de clientes
-d. Ver detalles de una venta específica
-e. Generar un resumen estadístico
-f. Salir del programa
-
-- 4. Mientras el usuario no elija la opción "Salir":
+- 2. Mientras el usuario no elija la opción "Salir":
 a. Leer la opción ingresada.
 b. Si la opción es válida:
 
-- 5. Ejecutar la acción correspondiente.
+- 3. Ejecutar la acción correspondiente.
 
-- 6. Mostrar los resultados en la consola.
+- 4. Mostrar los resultados en la consola.
 c. Si la opción no es válida:
 
-- 7. Mostrar un mensaje de error indicando que la opción no existe.
+- 5. Mostrar un mensaje de error indicando que la opción no existe.
 
-- 8.
-  9.  Finalizar la ejecución del programa.
+- 6.  Finalizar la ejecución del programa.
 
 Fin
 
 # Diagrama del programa
-
-flowchart TD
-    A[Inicio] --> B[Importar librerías]
-    B --> C[Cargar archivos Excel normalizados]
-    C --> D[Mostrar menú interactivo]
-    D --> E{¿Opción válida?}
-    E -- Sí --> F[Ejecutar acción según opción]
-    F --> G{¿Salir?}
-    G -- Sí --> H[Fin]
-    G -- No --> D
-    E -- No --> I[Mostrar mensaje de error]
-    I --> D
+```mermaid
+graph TD
+    A(["Inicio"]) --> B["Inicializar variable menu = None"]
+    B --> C{"¿menu != 5?"}
+    C -- Sí --> D@{ label: "Mostrar texto 'inicio'" }
+    D --> E["Solicitar opción al usuario"]
+    E --> F@{ label: "Mostrar 'Opción Seleccionada'" }
+    F --> G{"menu"}
+    G -- 1 --> H@{ label: "Mostrar 'integrantes'" }
+    G -- 2 --> I@{ label: "Mostrar 'tema'" }
+    G -- 3 --> J@{ label: "Mostrar 'datos'" }
+    G -- 4 --> K@{ label: "Mostrar 'pseudocódigo'" }
+    G -- 5 --> L@{ label: "Mostrar 'Gracias!'" }
+    G -- Otro --> M@{ label: "Mostrar 'Seleccione una opción válida'" }
+    H --> N["Volver al inicio del bucle"]
+    I --> N
+    J --> N
+    K --> N
+    M --> N
+    N --> C
+    L --> O(["Fin"])
+    C -- No --> O
+    D@{ shape: rect}
+    F@{ shape: rect}
+    H@{ shape: rect}
+    I@{ shape: rect}
+    J@{ shape: rect}
+    K@{ shape: rect}
+    L@{ shape: rect}
+    M@{ shape: rect}
+```

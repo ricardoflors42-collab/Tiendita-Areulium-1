@@ -16,7 +16,7 @@ integrantes = """
 # Integrantes
 1. Ricardo Flores ven
 2. Andrés Guzmán col
-3. 
+3. Rocio Belen Ruiz Diaz
 """
 
 tema = """
@@ -72,15 +72,27 @@ importe         | float        | razón              |
 
 pseudocodigo = """
 Inicio
-MIENTRAS menu != 5
-    EVALUAR menu
-        CASO 1:
-        CASO 2:
-        CASO 3:
-        CASO 4:
-        CASO 5:
-        CASO _:
-            Imprimir(Selecione una opción valida)
+- 1. Mostrar un menú interactivo con las siguientes opciones:
+a. Consultar integrantes
+b. Consultar Tema, problema y solución
+c. Consultar Datasets
+d. consultar psudocodigos
+e. salir
+
+- 2. Mientras el usuario no elija la opción "Salir":
+a. Leer la opción ingresada.
+b. Si la opción es válida:
+
+- 3. Ejecutar la acción correspondiente.
+
+- 4. Mostrar los resultados en la consola.
+c. Si la opción no es válida:
+
+- 5. Mostrar un mensaje de error indicando que la opción no existe.
+
+- 6.  Finalizar la ejecución del programa.
+
+Fin
 """
 menu = None
 while menu != 5:
