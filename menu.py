@@ -1,3 +1,5 @@
+import Analisis as a
+
 inicio = """
 #######################################################
 # Bienvenido a la documentacion del proyecto Aurelion #
@@ -5,18 +7,22 @@ inicio = """
 #######################################################
 """
 opciones = """
+1. Consultar integrantes
+2. Consultar Tema, problema y solución
+3. Consultar Datasets
+4. Consultar psudocodigos
+5. Consultar tablas
+6. Consultar Estadisticas
+7. Generar graficos
+8. Consultar correlación
+9. Salir
 Seleccione alguna opcion:
-1. Integrantes
-2. Tema, problema y solución
-3. Dataset
-4. Pseudocodigo
-5. Salir
 """
 integrantes = """
 # Integrantes
 1. Ricardo Flores ven
 2. Andrés Guzmán col
-3. Rocio Belen Ruiz Diaz
+3. Rocio Belen Ruiz Diaz Arg
 """
 
 tema = """
@@ -73,11 +79,15 @@ importe         | float        | razón              |
 pseudocodigo = """
 Inicio
 - 1. Mostrar un menú interactivo con las siguientes opciones:
-a. Consultar integrantes
-b. Consultar Tema, problema y solución
-c. Consultar Datasets
-d. consultar psudocodigos
-e. salir
+1. Consultar integrantes
+2. Consultar Tema, problema y solución
+3. Consultar Datasets
+4. consultar psudocodigos
+5. consultar tablas
+6. consultar Estadisticas
+7. generar graficos
+8. consultar correlación
+9. salir
 
 - 2. Mientras el usuario no elija la opción "Salir":
 a. Leer la opción ingresada.
@@ -94,8 +104,28 @@ c. Si la opción no es válida:
 
 Fin
 """
+
+Tablas = """
+Se van a mostra las 2 primeras filas de las tablas
+"""
+
+Estadisticas = """
+Se muestran estadisticas descriptivas de las principales variables
+"""
+
+Grafico = """
+Se van a guardar 3 graficas
+1. Grafico de detalle por categoria
+2. Grafico de distribucion importe
+3. Grafico de cantidad de veces que compra el cliente
+"""
+
+Correlacion = """
+Se muestra un grafico de correlacin entre variable sprincipales para identificar cuales se pueden usar para un pronosticoo
+"""
+
 menu = None
-while menu != 5:
+while menu != 9:
     print(inicio)
     menu = int(input(opciones))
     print(f'Opcion Selecccionada: {menu}')
@@ -109,6 +139,18 @@ while menu != 5:
         case 4:
             print(pseudocodigo)
         case 5:
+            print(Tablas)
+            a.VerTabla()
+        case 6:
+            print(Estadisticas)
+            a.EstadisticasDescriptivas()
+        case 7:
+            print(Grafico)
+            a.PrincipalesGraficas()
+        case 8:
+            print(Correlacion)
+            a.GraficoCorrelacion()
+        case 9:
             print('Gracias!')
         case _:
             print('Seleccione una opción valida')

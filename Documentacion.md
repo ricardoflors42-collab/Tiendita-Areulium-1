@@ -55,11 +55,15 @@ importe | float | razón |
 # Pseudocodigo
 Inicio
 - 1. Mostrar un menú interactivo con las siguientes opciones:
-a. Consultar integrantes
-b. Consultar Tema, problema y solución
-c. Consultar Datasets
-d. consultar psudocodigos
-e. salir
+1. Consultar integrantes
+2. Consultar Tema, problema y solución
+3. Consultar Datasets
+4. consultar psudocodigos
+5. consultar tablas
+6. consultar Estadisticas
+7. generar graficos
+8. consultar correlación
+9. salir
 
 - 2. Mientras el usuario no elija la opción "Salir":
 a. Leer la opción ingresada.
@@ -89,7 +93,11 @@ graph TD
     G -- 2 --> I@{ label: "Mostrar 'tema'" }
     G -- 3 --> J@{ label: "Mostrar 'datos'" }
     G -- 4 --> K@{ label: "Mostrar 'pseudocódigo'" }
-    G -- 5 --> L@{ label: "Mostrar 'Gracias!'" }
+    G -- 5 --> K@{ label: "Mostrar 'Tablas'" }
+    G -- 6 --> K@{ label: "Mostrar 'Estadisticas'" }
+    G -- 7 --> K@{ label: "Mostrar 'Graficos'" }
+    G -- 8 --> K@{ label: "Mostrar 'Correlacion'" }
+    G -- 9 --> L@{ label: "Mostrar 'Gracias!'" }
     G -- Otro --> M@{ label: "Mostrar 'Seleccione una opción válida'" }
     H --> N["Volver al inicio del bucle"]
     I --> N
